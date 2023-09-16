@@ -1,3 +1,10 @@
+function isMobileDevice() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  return /mobile|android|iphone|ipad|ipod|blackberry|windows phone/i.test(
+    userAgent
+  );
+}
+
 // Целевой элемент, который вы хотите отслеживать
 const targetElement = document.querySelector(".box");
 
@@ -91,7 +98,7 @@ const boxCallback = (entries, observer) => {
 // Функция обратного вызова для Intersection Observer для .sections
 const sectionCallback = (entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting && isUserScrolling) {
+    if (entry.isIntersecting && isUserScrolling && !isMobileDevice()) {
       // Элемент попал в зону видимости и скролл был запущен пользовательской интеракцией
       console.log(`Элемент .section попал в зону видимости: ${entry.target}`);
       const scrollSelector = entry.target.getAttribute("data-scroll-selector");
