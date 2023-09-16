@@ -1,0 +1,76 @@
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 20px 0;
+}
+.nav-menu .nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 3px;
+}
+.nav-menu .logo {
+}
+.nav-links a:hover {
+  background-color: var(--base-color-tr);
+}
+.nav-links a {
+  padding: 7px 16px;
+  color: var(--main-color);
+  font-size: 16px;
+  white-space: pre;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+}
+nav .logo-image,
+footer .logo-image {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  outline: none;
+  height: 60px;
+}
+nav .logo-image img,
+footer .logo-image img {
+  height: 100%;
+}
+
+.nav-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-info .right {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.nav-info .contact {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.nav-info .contact .contact-info {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.nav-info .contact .contact-info img {
+  width: 24px;
+  aspect-ratio: 1;
+  stroke: #ca9b64;
+}
+.nav-info .contact .contact-info span {
+  font-weight: 500;
+}
